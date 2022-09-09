@@ -1,0 +1,66 @@
+﻿@page
+@model MeuPensamento.Pages.MeusPensamentos.NovoPensamentoReacoesModel
+@{
+}
+
+@section Css {
+<link rel="stylesheet" href="~/css/meuspensamentos/main.css" asp-append-version="true" />
+
+}
+
+<hr class="linha" />
+<h6>Meus Pensamentos</h6>
+<form method="post">
+    <div class="form-container input-pensamento-container">
+        <div class="label-pensamento">
+            <label>
+                Agora descreva quais as reações do seu corpo...
+            </label>
+        </div>
+        <div class="input-reacao">
+            <select class="form-select">
+                <option selected></option>
+                <option value="Suor">Suor</option>
+                <option value="Taquicardia">Taquicardia</option>
+                <option value="Falta de ar">Falta de ar</option>
+                <option value="Formigamento">Formigamento</option>
+                <option value="Tremedeira">Tremedeira</option>
+                <option value="Visão turva">Visão turva</option>
+                <option value="Perda de força">Perda de força</option>
+            </select>
+            <button type="button">
+                <i class="fa-solid fa-plus"></i>
+            </button>
+        </div>
+        <div class="input-reacao-selecionada">
+            <ul>
+                @{int contador = 0;}
+                @foreach(string valor in Model.ReacoesSelecionadas)
+                {
+                    contador++;
+
+                    <li data-count='@contador'>
+                    <span>@valor</span>
+                    <button type="button">
+                        <i class="fa-solid fa-minus"></i>
+                    </button>
+                </li>
+                }
+            </ul>
+        </div>
+        <input type="hidden" asp-for=Reacoes />
+    </div>
+    <div class="button-container container">
+        <button class="button" asp-page-handler=Voltar>
+            <span class="button-text">Voltar</span>
+        </button>
+        <button class="button" asp-page-handler=Avancar>
+            <span class="button-text">OK</span>
+        </button>
+    </div>
+</form>
+
+@section Scripts {
+        <script src="~/js/meuspensamentos/main.js" asp-append-version="true"></script>
+
+}

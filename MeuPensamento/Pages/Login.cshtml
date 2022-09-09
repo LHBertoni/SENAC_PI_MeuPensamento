@@ -1,0 +1,52 @@
+﻿@page
+@model MeuPensamento.Pages.LoginModel
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login - MeuPensamento</title>
+    <link href="https://fonts.googleapis.com/css?family=Verdana&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/login/main.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="body-container">
+        <div class="logo"></div>
+        <form method="post">
+            <div class="form-container container">
+                <div class="input-container form-group">
+                    <label>email</label>
+                    <input asp-for=Email />
+                </div>
+                <div class="input-container form-group">
+                    <label>senha</label>
+                    <input asp-for=Password type="password" />
+                </div>
+            </div>
+            <div class="button-container container">
+                <button class="button" asp-page-handler=Login >
+                    <span class="button-text">Login</span>
+                </button>
+                <button class="button" asp-page-handler=Cadastrar>
+                    <span class="button-text">Cadastro</span>
+                </button>
+            </div>
+        </form>
+    </div> 
+    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    @if (!string.IsNullOrWhiteSpace(@Model.AlertMsg))
+    {
+        <script type="text/javascript">
+            $(document).ready(() => {
+                alert('@Html.Raw(Model.AlertMsg)');
+            });
+        </script>
+    }
+</body>
+</html>

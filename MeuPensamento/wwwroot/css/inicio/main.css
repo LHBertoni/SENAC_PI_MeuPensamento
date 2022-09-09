@@ -1,0 +1,46 @@
+
+.o-que-pensa-container {
+    background: rgba(133, 113, 211, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+}
+
+    .o-que-pensa-container .o-que-pensa {
+        color: rgba(132,113,211,0.9700000286102295);
+        background: rgba(133, 113, 211, 0.1);
+        font-family: Verdana;
+        font-weight: Regular;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px 30px;
+        border-radius: 40px;
+        margin: auto;
+    }
+
+.pensamento-container {
+    display: flex;
+    flex-flow: column;
+}
+
+    .pensamento-container .pensamento {
+        width: 300px;
+        height: 125px;
+        background: url("../../images/home/pensamento.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: auto;
+        display: flex;
+        padding: 20px 30px 30px 30px;
+    }
+
+        .pensamento-container .pensamento span {
+            margin: auto;
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+        }

@@ -1,0 +1,120 @@
+* {
+    box-sizing: border-box;
+    font-family: Verdana;
+}
+
+body {
+    font-size: 14px;
+    background-color: gray;
+}
+
+.body-container {
+    width: 360px;
+    height: 640px;
+    background: rgba(255,255,255,1);
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    overflow-y: auto;
+    border-radius: 15px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+}
+
+header {
+    display: flex;
+}
+
+    header .logo-header {
+        width: 70px;
+        height: 65px;
+        background: url("../images/logo-header.png");
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        margin: 15px;
+    }
+
+    header .navbar-container {
+        width: 100%;
+        background: rgba(132,113,211,0.6000000238418579);
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        display: flex;
+        padding-left: 25px;
+        padding-right: 10px;
+    }
+
+        header .navbar-container .nav-title {
+            font-family: Verdana;
+            font-weight: Bold;
+            font-size: 14px;
+            margin-bottom: auto;
+            margin-top: auto;
+            color: white;
+            margin-right: auto;
+        }
+
+        header .navbar-container .navbar-toggler {
+            color: white;
+        }
+
+        header .navbar-container .navbar {
+            position: relative;
+        }
+
+        header .navbar-container .navbar-collapse {
+            position: absolute;
+            top: 75%;
+            background-color: rgba(132,113,211);
+            border-radius: 30px;
+            opacity: 1;
+            padding: 10px 15px;
+            right: 0;
+            z-index: 1;
+            width: 210px;
+        }
+
+            header .navbar-container .navbar-collapse .navbar-nav li a {
+                float: right;
+            }
+
+            header .navbar-container .navbar-collapse .navbar-nav li.nav-sair {
+                margin-top: 25px;
+            }
+
+                header .navbar-container .navbar-collapse .navbar-nav li.nav-sair a {
+                    font-weight: 700;
+                }
+
+h6 {
+    text-decoration: underline;
+    color: rgba(91, 9, 109, 0.72);
+    font-weight: 700 !important;
+    text-align: right;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 95%;
+}
+
+hr {
+    width: 95%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    height: 3px !important;
+    border-radius: 10px;
+}
+
+.modal-dialog {
+    margin-left: 7px;
+    margin-right: 7px;
+}

@@ -1,0 +1,24 @@
+﻿@page
+@model MeuPensamento.Pages.MeusPensamentos.NovoPensamentoInseridoModel
+@{
+}
+
+@section Css {
+<link rel="stylesheet" href="~/css/meuspensamentos/main.css" asp-append-version="true" />
+
+}
+
+<hr class="linha" />
+<h6>Meus Pensamentos</h6>
+<form method="post">
+    <div class="form-container">
+        <div class="pensamento-inserido">
+            <span>PENSAMENTO ARQUIVADO!</span>
+        </div>
+    </div>
+    <div class="button-container container">
+        <button class="button" asp-page-handler=Ok>
+            <span class="button-text">OK</span>
+        </button>
+    </div>
+</form>

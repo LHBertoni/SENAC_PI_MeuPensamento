@@ -1,0 +1,33 @@
+﻿@page
+@model MeuPensamento.Pages.MeusPensamentos.NovoPensamentoSituacaoModel
+@{
+}
+
+@section Css {
+<link rel="stylesheet" href="~/css/meuspensamentos/main.css" asp-append-version="true" />
+
+}
+
+<hr class="linha" />
+<h6>Meus Pensamentos</h6>
+<form method="post">
+    <div class="form-container input-pensamento-container">
+        <div class="label-pensamento">
+            <label asp-for=Situacao>
+                Qual a situação em que esse
+                pensamento ocorreu?
+            </label>
+        </div>
+        <div class="input-pensamento">
+            <textarea asp-for=Situacao tabindex=0></textarea>
+        </div>
+    </div>
+    <div class="button-container container">
+        <button class="button" asp-page-handler=Voltar>
+            <span class="button-text">Voltar</span>
+        </button>
+        <button class="button" asp-page-handler=Avancar>
+            <span class="button-text">OK</span>
+        </button>
+    </div>
+</form>

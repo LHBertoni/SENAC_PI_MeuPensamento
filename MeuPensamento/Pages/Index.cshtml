@@ -1,0 +1,28 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Início";
+}
+
+@section Css {
+<link rel="stylesheet" href="~/css/inicio/main.css" asp-append-version="true" />
+
+}
+
+<hr class="linha" />
+<h6>Início</h6>
+<div class="o-que-pensa-container">
+    <a asp-page="MeusPensamentos/NovoPensamento" class="o-que-pensa">No que você está pensando?</a>
+</div>
+<hr class="linha" />
+<h6>Meus Cartões</h6>
+<div class="pensamento-container">
+    @foreach (var cartao in Model.CartoesEnfrentamentos)
+    {
+        <div class="pensamento">
+            <span>
+                “@Html.Raw(cartao.Mensagem)"
+            </span>
+        </div>
+    }
+</div>

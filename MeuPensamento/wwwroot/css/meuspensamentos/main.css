@@ -1,0 +1,503 @@
+
+.input-pensamento-container {
+    background: rgba(133, 113, 211, 0.6);
+    border-radius: 31px;
+    padding: 10px;
+}
+
+    .input-pensamento-container .label-pensamento {
+        background: rgba(133, 113, 211, 0.97);
+        border-radius: 25px;
+        padding: 15px 30px;
+        margin-bottom: 15px;
+        display: flex;
+        text-align: center;
+    }
+
+        .input-pensamento-container .label-pensamento label {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            margin: auto;
+        }
+
+    .input-pensamento-container .input-pensamento {
+        height: 160px;
+        padding: 10px;
+        background: rgba(133, 113, 211, 0.97);
+        border-radius: 30px;
+        margin: auto;
+    }
+
+        .input-pensamento-container .input-pensamento textarea {
+            background-color: transparent;
+            overflow-y: auto;
+            width: 100%;
+            height: 100%;
+            resize: none;
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            border-color: transparent;
+        }
+
+    .input-pensamento-container .input-range-sentimento {
+        display: flex;
+        padding: 10px;
+        margin: 5px 0px;
+    }
+
+        .input-pensamento-container .input-range-sentimento span {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 17px;
+            line-height: 21px;
+            color: #FFFFFF;
+        }
+
+        .input-pensamento-container .input-range-sentimento .form-range {
+            margin-left: auto;
+            width: 150px;
+        }
+
+            .input-pensamento-container .input-range-sentimento .form-range::-webkit-slider-runnable-track {
+                cursor: pointer;
+                animate: 0.2s;
+                background: rgba(133, 113, 211, 0.97);
+            }
+
+            .input-pensamento-container .input-range-sentimento .form-range::-webkit-slider-thumb {
+                height: 20px;
+                width: 20px;
+                border-radius: 50%;
+                background: #fff;
+                cursor: pointer;
+                -webkit-appearance: none;
+                margin-top: -6px;
+            }
+
+            .input-pensamento-container .input-range-sentimento .form-range:focus::-webkit-slider-runnable-track {
+                box-shadow: none;
+                border: none;
+            }
+
+    .input-pensamento-container .sentimento-adicional {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+        .input-pensamento-container .sentimento-adicional button {
+            background: rgba(133, 113, 211, 0.97);
+            border-radius: 25px;
+            padding: 15px 30px;
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: #FFFFFF;
+            border: none;
+        }
+
+    .input-pensamento-container .input-reacao {
+        background: #FFFFFF;
+        border-radius: 30px;
+        display: flex;
+        margin-bottom: 15px;
+    }
+
+        .input-pensamento-container .input-reacao select {
+            color: rgba(133, 113, 211, 1);
+            width: 100%;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            border: none;
+        }
+
+        .input-pensamento-container .input-reacao button {
+            color: rgba(133, 113, 211, 1);
+            width: 10px;
+            margin-right: 15px;
+            background: none;
+            border: none;
+        }
+
+    .input-pensamento-container .input-reacao-selecionada {
+        background: rgba(133, 113, 211, 0.97);
+        border-radius: 25px;
+        height: 200px;
+        padding: 10px 15px;
+        color: white;
+        overflow-y: auto;
+    }
+
+        .input-pensamento-container .input-reacao-selecionada ul {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 0;
+        }
+
+            .input-pensamento-container .input-reacao-selecionada ul li {
+                display: flex;
+            }
+
+                .input-pensamento-container .input-reacao-selecionada ul li span {
+                    width: 100%;
+                    font-family: 'Verdana';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 17px;
+                }
+
+                .input-pensamento-container .input-reacao-selecionada ul li button {
+                    margin: auto;
+                    background: none;
+                    border: none;
+                    color: white;
+                }
+
+.pensamento-inserido {
+    display: flex;
+    height: 100%;
+    margin-top: 25px;
+}
+
+    .pensamento-inserido span {
+        margin: auto;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 36px;
+        text-align: center;
+        color: rgba(133, 113, 211, 0.6);
+    }
+
+.modal-pensamento .modal-content {
+    background: rgba(133, 113, 211, 0.97);
+    border-radius: 45px;
+}
+
+    .modal-pensamento .modal-content button.close {
+        color: white;
+    }
+
+    .modal-pensamento .modal-content .modal-input-sentimento-adicional {
+        height: 160px;
+        padding: 10px;
+        background: white;
+        border-radius: 30px;
+        margin: auto;
+    }
+
+        .modal-pensamento .modal-content .modal-input-sentimento-adicional textarea {
+            background-color: transparent;
+            overflow-y: auto;
+            width: 100%;
+            height: 100%;
+            resize: none;
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14px;
+            line-height: 17px;
+            color: rgba(133, 113, 211, 1);
+            border-color: transparent;
+        }
+
+            .modal-pensamento .modal-content .modal-input-sentimento-adicional textarea::placeholder,
+            .modal-pensamento .modal-content .modal-input-sentimento-adicional textarea::-webkit-input-placeholder,
+            .modal-pensamento .modal-content .modal-input-sentimento-adicional textarea:-moz-placeholder,
+            .modal-pensamento .modal-content .modal-input-sentimento-adicional textarea::-moz-placeholder,
+            .modal-pensamento .modal-content .modal-input-sentimento-adicional textarea:-ms-input-placeholder {
+                font-family: 'Verdana';
+                font-style: normal;
+                font-weight: 700;
+                font-size: 14px;
+                line-height: 17px;
+                background: rgba(133, 113, 211, 0.75);
+            }
+
+    .modal-pensamento .modal-content .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-pensamento .modal-content .modal-footer {
+        display: flex;
+        border-top: none;
+    }
+
+        .modal-pensamento .modal-content .modal-footer button {
+            width: 118px;
+            height: 50px;
+            background: #FFFFFF;
+            border-radius: 25px;
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            border-color: transparent;
+        }
+
+            .modal-pensamento .modal-content .modal-footer button .button-text {
+                margin: auto;
+                color: rgba(133, 113, 211, 0.97);
+                font-family: Verdana;
+                font-weight: Bold;
+                font-size: 14px;
+            }
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 15px;
+}
+
+    .button-container .button {
+        width: 118px;
+        height: 50px;
+        background: rgba(132,113,211,0.6000000238418579);
+        border-top-left-radius: 25px;
+        border-top-right-radius: 25px;
+        border-bottom-left-radius: 25px;
+        border-bottom-right-radius: 25px;
+        display: flex;
+        margin-right: auto;
+        margin-left: auto;
+        border-color: transparent;
+    }
+
+        .button-container .button .button-text {
+            margin: auto;
+            color: rgba(255,255,255,1);
+            font-family: Verdana;
+            font-weight: Bold;
+            font-size: 14px;
+        }
+
+.modal-backdrop {
+    z-index: -1 !important;
+    display: none !important;
+}
+
+.model {
+    background-color: rgb(255, 255, 255, 0.25) !important;
+}
+
+
+.o-que-pensa-container {
+    background: rgba(133, 113, 211, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+}
+
+    .o-que-pensa-container .o-que-pensa {
+        color: rgba(132,113,211,0.9700000286102295);
+        background: rgba(133, 113, 211, 0.1);
+        font-family: Verdana;
+        font-weight: Regular;
+        font-size: 14px;
+        text-align: center;
+        padding: 10px 30px;
+        border-radius: 40px;
+        margin: auto;
+    }
+
+.pensamentos-container {
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+    .pensamentos-container span.data {
+        margin-right: auto;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(91, 9, 109, 0.72);
+        margin-top: 5px;
+    }
+
+        .pensamentos-container span.data:first-child {
+            margin-top: 15px;
+        }
+
+    .pensamentos-container .pensamento-card {
+        background: rgba(133, 113, 211, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        margin: 10px 0px;
+        flex-direction: column;
+    }
+
+        .pensamentos-container .pensamento-card span {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 15px;
+            line-height: 17px;
+            color: rgba(133, 113, 211, 0.97);
+        }
+
+        .pensamentos-container .pensamento-card .pensamento-card-footer {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 12px;
+            color: #5B096D;
+            margin-left: auto;
+            margin-top: 10px;
+        }
+
+            .pensamentos-container .pensamento-card .pensamento-card-footer a {
+                color: #5B096D;
+                text-decoration: none;
+            }
+
+.pensamento-detalhe-container {
+    overflow-y: auto;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+    .pensamento-detalhe-container span.data {
+        margin-right: auto;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 17px;
+        color: rgba(91, 9, 109, 0.72);
+        margin-top: 5px;
+    }
+
+    .pensamento-detalhe-container .pensamento-card {
+        background: rgba(133, 113, 211, 0.1);
+        border-radius: 15px;
+        padding: 20px;
+        display: flex;
+        margin: 10px 0px;
+        flex-direction: column;
+    }
+
+        .pensamento-detalhe-container .pensamento-card .pensamento {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            /* Lavanda Escuro Fonte */
+
+            color: rgba(133, 113, 211, 0.97);
+        }
+
+        .pensamento-detalhe-container .pensamento-card hr {
+            margin-right: -20px !important;
+            margin-left: -20px !important;
+            width: auto !important;
+        }
+
+        .pensamento-detalhe-container .pensamento-card span.label {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 17px;
+            /* Lavanda Escuro Fonte */
+
+            color: rgba(133, 113, 211, 0.97);
+            margin-bottom: 3px;
+        }
+
+        .pensamento-detalhe-container .pensamento-card span.informacao {
+            color: black;
+            padding: 15px;
+            width: 100%;
+            background: #D9D9D9;
+            margin-bottom: 10px;
+            height: 90px;
+            text-align: justify;
+            overflow-y: auto;
+        }
+
+        .pensamento-detalhe-container .pensamento-card .pensamento-card-footer {
+            font-family: 'Verdana';
+            font-style: normal;
+            font-weight: 700;
+            font-size: 12px;
+            line-height: 12px;
+            color: #5B096D;
+            margin-left: auto;
+            margin-top: 10px;
+        }
+
+            .pensamento-detalhe-container .pensamento-card .pensamento-card-footer a {
+                color: #5B096D;
+                text-decoration: none;
+                cursor: pointer;
+            }
+
+.modal-arquivamento .modal-content {
+    background: rgba(133, 113, 211, 0.97);
+    border-radius: 45px;
+}
+
+    .modal-arquivamento .modal-content button.close {
+        color: white;
+    }
+
+    .modal-arquivamento .modal-content .modal-body {
+        margin: auto;
+        font-family: 'Verdana';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 14px;
+        color: white;
+        text-align: center;
+    }
+
+    .modal-arquivamento .modal-content .modal-header {
+        border-bottom: none;
+    }
+
+    .modal-arquivamento .modal-content .modal-footer {
+        display: flex;
+        border-top: none;
+    }
+
+        .modal-arquivamento .modal-content .modal-footer button {
+            width: 118px;
+            height: 50px;
+            background: #FFFFFF;
+            border-radius: 25px;
+            display: flex;
+            margin-right: auto;
+            margin-left: auto;
+            border-color: transparent;
+        }
+
+            .modal-arquivamento .modal-content .modal-footer button .button-text {
+                margin: auto;
+                color: rgba(133, 113, 211, 0.97);
+                font-family: Verdana;
+                font-weight: Bold;
+                font-size: 14px;
+            }

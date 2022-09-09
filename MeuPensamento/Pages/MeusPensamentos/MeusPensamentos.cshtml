@@ -1,0 +1,33 @@
+﻿@page
+@model MeuPensamento.Pages.MeusPensamentos.MeusPensamentosModel
+@{
+}
+
+@section Css {
+<link rel="stylesheet" href="~/css/meuspensamentos/main.css" asp-append-version="true" />
+
+}
+
+<hr class="linha" />
+<h6>Meus Pensamentos</h6>
+<div class="o-que-pensa-container">
+    <a asp-page="NovoPensamento" class="o-que-pensa">No que você está pensando?</a>
+</div>
+<div class="pensamentos-container">
+    @foreach (var dataPensamento in Model.DataPensamentos)
+    {
+        <span class="data">@dataPensamento.Data.ToString("dd/MM/yyyy")</span>
+        @foreach (var pensamento in dataPensamento.Pensamentos)
+        {
+            <div class="pensamento-card">
+                <span>"@Html.Raw(@pensamento.Pensamento)"</span>
+                <div class="pensamento-card-footer">
+                    <a asp-page="DetalhesPensamento" asp-route-id="@pensamento.Id">
+                        <i class="fa-solid fa-file"></i>
+                    </a>
+                    @pensamento.DataHora.ToString("HH:mm")
+                </div>
+            </div>
+        }
+    }
+</div>

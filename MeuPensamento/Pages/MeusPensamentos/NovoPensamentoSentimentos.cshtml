@@ -1,0 +1,68 @@
+﻿@page
+@model MeuPensamento.Pages.MeusPensamentos.NovoPensamentoSentimentosModel
+@{
+}
+
+@section Css {
+<link rel="stylesheet" href="~/css/meuspensamentos/main.css" asp-append-version="true" />
+
+}
+
+<hr class="linha" />
+<h6>Meus Pensamentos</h6>
+<form method="post">
+    <div class="form-container input-pensamento-container">
+        <div class="label-pensamento">
+            <label>
+                O que sentiu quando esse
+                pensamento surgiu?
+            </label>
+        </div>
+        <div class="input-range-sentimento">
+            <span>Raiva</span>
+            <input asp-for=Raiva type="range" class="form-range" step="10">
+        </div>
+        <div class="input-range-sentimento">
+            <span>Angustia</span>
+            <input asp-for=Angustia type="range" class="form-range" step="10">
+        </div>
+        <div class="input-range-sentimento">
+            <span>Tristeza</span>
+            <input asp-for=Tristeza type="range" class="form-range" step="10">
+        </div>
+        <div class="input-range-sentimento">
+            <span>Ansiedade</span>
+            <input asp-for=Ansiedade type="range" class="form-range" step="10">
+        </div>
+        <div class="sentimento-adicional">
+            <button type="button" data-bs-toggle="modal" data-bs-target="#modalSentimetoAdicional">
+                Você quer falar mais sobre o que sentiu?
+            </button>
+        </div>
+    </div>
+    <div class="button-container container">
+        <button class="button" asp-page-handler=Voltar>
+            <span class="button-text">Voltar</span>
+        </button>
+        <button class="button" asp-page-handler=Avancar>
+            <span class="button-text">OK</span>
+        </button>
+    </div>
+    <div class="modal fade modal-pensamento" id="modalSentimetoAdicional" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-input-sentimento-adicional">
+                        <textarea asp-for=SentimentoAdicional placeholder="Detalhe melhor o que você sentiu..."></textarea>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="button" data-bs-dismiss="modal"> <span class="button-text">OK</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
