@@ -12,14 +12,17 @@ namespace MeuPensamento.Pages.MeusPensamentos
         private readonly ILogger<NovoPensamentoReacoesModel> _logger;
         private readonly SessionService _sessionService;
         private readonly PensamentoService _pensamentoService;
+        private readonly SintomaService _sintomaService;
 
         public NovoPensamentoReacoesModel(ILogger<NovoPensamentoReacoesModel> logger,
             SessionService sessionService,
-            PensamentoService pensamentoService)
+            PensamentoService pensamentoService,
+            SintomaService sintomaService)
         {
             _logger = logger;
             _sessionService = sessionService;
             _pensamentoService = pensamentoService;
+            _sintomaService = sintomaService;
         }
 
         [BindProperty]
@@ -27,6 +30,7 @@ namespace MeuPensamento.Pages.MeusPensamentos
         public string Reacoes { get; set; } = string.Empty;
 
         public List<string> ReacoesSelecionadas { get; set; } = new List<string>();
+        public List<string> Sintomas { get; set; } = new List<string>();
 
         public async Task<IActionResult> OnGet()
         {
@@ -37,6 +41,10 @@ namespace MeuPensamento.Pages.MeusPensamentos
                 Reacoes = String.Join(";", pensamento.Reacoes);
 
                 ReacoesSelecionadas = pensamento.Reacoes;
+
+                var sintomas = _sintomaService.GetSintomas();
+
+                Sintomas.AddRange(sintomas.Select(i => i.Descricao));
 
                 return Page();
             }

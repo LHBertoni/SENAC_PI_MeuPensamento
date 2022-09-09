@@ -3,6 +3,7 @@ using MeuPensamento.Models.MeusPensamentos;
 using MeuPensamento.Pages.Base;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Linq;
 
 namespace MeuPensamento.Pages.MeusPensamentos
 {
@@ -22,7 +23,7 @@ namespace MeuPensamento.Pages.MeusPensamentos
 
         public void OnGet()
         {
-            var pensamentos = _pensamentoService.GetPensamentos(User.IdUsuario());
+            var pensamentos = _pensamentoService.GetPensamentos(User.IdUsuario()).OrderByDescending(i => i.Datahora);
 
             foreach (var pensamentoData in pensamentos.GroupBy(i => i.Datahora.Date))
                 DataPensamentos.Add(new MeuPensamentoDataSimples()

@@ -1,6 +1,4 @@
-using MeuPensamento.DAO;
-using MeuPensamento.DAO.Models;
-using MeuPensamento.DAO.Services;
+using MeuPensamento.DAO.Infrastructure;
 using MeuPensamento.Services;
 using MeuPensamento.Tools.Util;
 using Microsoft.AspNetCore.Authentication.Cookies;
@@ -40,12 +38,9 @@ builder.Services.AddSession(options =>
 
 builder.Services.AddScoped<SessionService>();
 builder.Services.AddHttpContextAccessor();
-builder.Services.AddDbContext<MeuPensamentoContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("MeuPensamentoDbContext")));
 builder.Services.AddSingleton<CriptografiaProvider>();
 
-builder.Services.AddScoped<UsuarioService>();
-builder.Services.AddScoped<PensamentoService>();
-builder.Services.AddScoped<CartaoEnfrentamentoService>();
+builder.Services.AddDaoServices(builder.Configuration);
 
 var app = builder.Build();
 
@@ -69,5 +64,7 @@ app.MapRazorPages();
 app.MapDefaultControllerRoute();
 
 app.UseSession();
+
+app.UseRequestLocalization();
 
 app.Run();

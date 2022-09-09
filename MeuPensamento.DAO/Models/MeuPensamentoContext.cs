@@ -21,6 +21,7 @@ namespace MeuPensamento.DAO.Models
         public virtual DbSet<Pensamento> Pensamentos { get; set; } = null!;
         public virtual DbSet<Reacoes> Reacoes { get; set; } = null!;
         public virtual DbSet<Usuario> Usuarios { get; set; } = null!;
+        public virtual DbSet<Sintoma> Sintomas { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -132,6 +133,19 @@ namespace MeuPensamento.DAO.Models
                     .HasMaxLength(50)
                     .IsUnicode(false)
                     .HasColumnName("SENHA");
+            });
+
+
+            modelBuilder.Entity<Sintoma>(entity =>
+            {
+                entity.ToTable("SINTOMA");
+
+                entity.Property(e => e.Id).HasColumnName("ID");
+
+                entity.Property(e => e.Descricao)
+                    .HasMaxLength(50)
+                    .IsUnicode(false)
+                    .HasColumnName("DESCRICAO");
             });
 
             OnModelCreatingPartial(modelBuilder);
