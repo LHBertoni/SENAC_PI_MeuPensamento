@@ -59,8 +59,8 @@ namespace MeuPensamento.Pages.MeusPensamentos
 
         public async Task<IActionResult> OnPostAvancar()
         {
-            if (ModelState.IsValid)
-            {
+            //if (ModelState.IsValid)
+            //{
                 var pensamento = _sessionService.GetSession<Models.MeusPensamentos.MeuPensamento>(Infrastructure.SessionConstants.NovoPensamento);
 
                 pensamento.Raiva = Raiva;
@@ -72,13 +72,13 @@ namespace MeuPensamento.Pages.MeusPensamentos
                 _sessionService.SetSession(Infrastructure.SessionConstants.NovoPensamento, pensamento);
 
                 return RedirectToPage("NovoPensamentoReacoes");
-            }
-            else
-            {
-                AlertMsg = "Preencha os campos!";
+            //}
+            //else
+            //{
+            //    AlertMsg = "Preencha os campos!";
 
-                return Page();
-            }
+            //    return Page();
+            //}
         }
 
         public async Task<IActionResult> OnPostVoltar()

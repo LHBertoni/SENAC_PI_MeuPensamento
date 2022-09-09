@@ -45,6 +45,7 @@ builder.Services.AddSingleton<CriptografiaProvider>();
 
 builder.Services.AddScoped<UsuarioService>();
 builder.Services.AddScoped<PensamentoService>();
+builder.Services.AddScoped<CartaoEnfrentamentoService>();
 
 var app = builder.Build();
 
