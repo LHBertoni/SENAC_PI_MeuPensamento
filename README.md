@@ -3,9 +3,10 @@ Repositório para o trabalho da matéria 2202-PROJETO INTEGRADOR: DESENVOLVIMENT
 
 
 # DEMO
-O demo está publicado no link: https://linkdemo
-para acessar:
-email@email.com
+O demo está publicado no link: https://meupensamento.azurewebsites.net
+<br />
+para acessar:<br />
+email@email.com<br />
 123456
 
 # EQUIPE
